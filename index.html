@@ -5,6 +5,11 @@
         <script type="text/javascript" src="scripts\inn_noun.js"></script>
         <script type="text/javascript" src="scripts\inn_adjective.js"></script>
         <script type="text/javascript" src="scripts\shop_names.js"></script>
+        <script type="text/javascript" src="scripts\market_stalls.js"></script>
+        <script type="text/javascript" src="scripts\city_feature.js"></script>
+        <script type="text/javascript" src="scripts\city_quest.js"></script>
+        <script type="text/javascript" src="scripts\npc_features.js"></script>
+        <script type="text/javascript" src="scripts\curious_items.js"></script>
 
         
         <title>
@@ -18,7 +23,11 @@
             <tr>
                 <td width=20%>
                     <h3><strong>Fae</strong>– Witch of the Fireflies. Everyone knows that fireflies are powerful spirits. They are the promises broken, the secrets unkept. They exist in two worlds at once and flutter with the light that slowly drips out of them into nothing. Fae has learned to capture them, and as we all know, to hold something is to wield it. Wherever she goes, awe-inspiring feats of good and evil follow.</h3>
-                    <button onclick="cityExplore(inn_adjective, inn_noun, shop_names)">City Explore</button>
+                    <button onclick="cityExplore(inn_adjective, inn_noun, shop_names, market_stalls, city_feature, city_quest)">City Explore</button>
+                    <br><br>
+                    <button onclick="npcGenerate(npc_firstname, npc_lastname, npc_gender, npc_race, npc_height, npc_body, npc_notable, npc_clothing, npc_profession, npc_personality, npc_motive)">Generate NPC</button>
+                    <br><br>
+                    <button onclick="curiousItemGenerate(curious_items)">Curious Item</button>
                 </td>
 
                 
