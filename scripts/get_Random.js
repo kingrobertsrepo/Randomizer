@@ -53,6 +53,31 @@ function itemGenerate(curious_item, treasure_item, mundane_item) {
     document.getElementById('output-text').innerHTML = text
 }
 
+function trapGenerate(challenges, physical_trigger, physical_reaction, physical_trap, arcane_trigger, arcane_reaction, arcane_trap, trap_reset) {
+    var challenge = getRandom(challenges)
+    var physicalTrigger = getRandom(physical_trigger)
+    var physicalReaction = getRandom(physical_reaction)
+    var physicalTrap = getRandom(physical_trap)
+    var arcaneTrigger = getRandom(arcane_trigger)
+    var arcaneReaction = getRandom(arcane_reaction)
+    var arcaneTrap = getRandom(arcane_trap)
+    var reset = getRandom(trap_reset)
+
+
+    var text = "<b>Challenge:</b> " + challenge
+    text += "<br><br><br><b>Physical trap:</b> "
+    text += "<br>Trigger: " + physicalTrigger
+    text += "<br>Reaction: " + physicalReaction
+    text += "<br>Trap: " + physicalTrap
+
+    text += "<br><br><br><b>Arcane trap:</b> "
+    text += "<br>Trigger: " + arcaneTrigger
+    text += "<br>Reaction: " + arcaneReaction
+    text += "<br>Trap: " + arcaneTrap
+
+    document.getElementById('output-text').innerHTML = text
+}
+
 function getRandom(inputArray){
     var item = inputArray[Math.floor(Math.random()*inputArray.length)];
     return item

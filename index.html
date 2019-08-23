@@ -10,6 +10,7 @@
         <script type="text/javascript" src="scripts\city_quest.js"></script>
         <script type="text/javascript" src="scripts\npc_features.js"></script>
         <script type="text/javascript" src="scripts\loot_items.js"></script>
+        <script type="text/javascript" src="scripts\traps.js"></script>
 
         
         <title>
@@ -28,6 +29,8 @@
                     <button onclick="npcGenerate(npc_firstname, npc_lastname, npc_gender, npc_race, npc_height, npc_body, npc_notable, npc_clothing, npc_profession, npc_personality, npc_motive)">Generate NPC</button>
                     <br><br>
                     <button onclick="itemGenerate(curious_items, treasure_items, mundane_items)">Curious Item</button>
+                    <br><br>
+                    <button onclick="trapGenerate(challenges, physical_trigger, physical_reaction, physical_trap, arcane_trigger, arcane_reaction, arcane_trap, trap_reset)">Traps</button>
                     </center>
                 </td>
 
@@ -35,17 +38,6 @@
 
                 <td style="background: lightgray; padding-left: 50px; width: 100%;">
                         <p id="output-text"></p>
-
-                        <script>
-                        var blue = inn_noun.length
-
-                        // alert(
-                        //     blue
-                        // )
-                        
-                        </script>
-                        
-
                 </td>
             </tr>
         </table>
