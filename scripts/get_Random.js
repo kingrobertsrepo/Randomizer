@@ -1,10 +1,11 @@
-function cityExplore(adjective, noun, shop, stall, feature, quest){
+function cityExplore(adjective, noun, shop, stall, feature, quest, uselessPerson){
     var inn_adjective = getRandom(adjective)
     var inn_noun = getRandom(noun)
     var shop_description = getRandom(shop)
     var market_stall = getRandom(stall)
     var city_feature = getRandom(feature)
     var city_quest = getRandom(quest)
+    var useless_person = getRandom(uselessPerson)
 
     
     var text = "<b>Inn name:</b> The " + inn_adjective + " " + inn_noun
@@ -12,6 +13,7 @@ function cityExplore(adjective, noun, shop, stall, feature, quest){
     text += "<br><br><b>Market Stall:</b> " + market_stall
     text += "<br><br><b>City Feature:</b> " + city_feature
     text += "<br><br><b>City Quest:</b> " + city_quest
+    text += "<br><br><b>Useless Person: (Gather information/Investigation)</b> " + useless_person
 
 
     document.getElementById('output-text').innerHTML = text
