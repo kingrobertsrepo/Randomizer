@@ -17,7 +17,6 @@ function cityExplore(adjective, noun, shop, stall, feature, quest){
     document.getElementById('output-text').innerHTML = text
 }
 
-
 function npcGenerate(firstname, lastname, gender, race, height, body, notable, clothing, profession, personality, motive) {
 
     var name_first = getRandom(firstname)
@@ -41,11 +40,18 @@ function npcGenerate(firstname, lastname, gender, race, height, body, notable, c
     document.getElementById('output-text').innerHTML = text
 }
 
-function curiousItemGenerate(item) {
-    var text = getRandom(item)
+function itemGenerate(curious_item, treasure_item, mundane_item) {
+    var curious = getRandom(curious_item)
+    var treasure = getRandom(treasure_item)
+    var mundane = getRandom(mundane_item)
+
+
+    var text = "<b>Curious Item:</b> " + curious
+    text += "<br><br><b>Treasure Item:</b> " + treasure
+    text += "<br><br><b>Mundane Item:</b> " + mundane
+
     document.getElementById('output-text').innerHTML = text
 }
-
 
 function getRandom(inputArray){
     var item = inputArray[Math.floor(Math.random()*inputArray.length)];
