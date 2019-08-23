@@ -78,6 +78,27 @@ function trapGenerate(challenges, physical_trigger, physical_reaction, physical_
     document.getElementById('output-text').innerHTML = text
 }
 
+function dungeonRoom(roomAccentMundane, roomAccentExotic, minorRoomItems, majorRoomItems) {
+    var minorAccent = getRandom(roomAccentMundane)
+    var exoticAccent = getRandom(roomAccentExotic)
+    var minorRoomItem1 = getRandom(minorRoomItems)
+    var minorRoomItem2 = getRandom(minorRoomItems)
+    var minorRoomItem3 = getRandom(minorRoomItems)
+    var majorRoomItem = getRandom(majorRoomItems)
+
+
+    var text = "<b>Dungeon room accent:</b> " + minorAccent
+    text += "<br><b>Exotic room accent:</b> " + exoticAccent
+    text += "<br><b>Exotic room feature:</b> " + majorRoomItem
+    text += "<br><br><b>Mundane Item:</b> " + minorRoomItem1
+    text += "<br><b>Mundane Item:</b> " + minorRoomItem2
+    text += "<br><b>Mundane Item:</b> " + minorRoomItem3
+
+
+    document.getElementById('output-text').innerHTML = text
+}
+
+
 function getRandom(inputArray){
     var item = inputArray[Math.floor(Math.random()*inputArray.length)];
     return item

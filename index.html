@@ -11,6 +11,7 @@
         <script type="text/javascript" src="scripts\npc_features.js"></script>
         <script type="text/javascript" src="scripts\loot_items.js"></script>
         <script type="text/javascript" src="scripts\traps.js"></script>
+        <script type="text/javascript" src="scripts\dungeon_accents.js"></script>
 
         
         <title>
@@ -20,9 +21,14 @@
 
     <body>
 
-        <table height=500px width=100%>
+        <table style="width: 100%; padding: 0;">
             <tr>
-                <td style="padding-left: 10px; background: lightblue; width: 15%; ">
+                <td colspan="2" style="background:black">
+                <center><img src="resources/banner.jpg" height="400px"></center>
+                </td>
+            </tr>
+            <tr style="height: 350px">
+                <td style="padding-top: 10px; padding-bottom: 10px; background: lightblue; width: 15%; ">
                     <center>
                     <button onclick="cityExplore(inn_adjective, inn_noun, shop_names, market_stalls, city_feature, city_quest)">City Explore</button>
                     <br><br>
@@ -31,6 +37,8 @@
                     <button onclick="itemGenerate(curious_items, treasure_items, mundane_items)">Curious Item</button>
                     <br><br>
                     <button onclick="trapGenerate(challenges, physical_trigger, physical_reaction, physical_trap, arcane_trigger, arcane_reaction, arcane_trap, trap_reset)">Traps</button>
+                    <br><br>
+                    <button onclick="dungeonRoom(roomAccentMundane, roomAccentExotic, minorRoomItems, majorRoomItems)">Dungeon Room</button>
                     </center>
                 </td>
 
