@@ -1,7 +1,8 @@
-function cityExplore(adjective, noun, shop, stall, feature, quest, uselessPerson){
+function cityExplore(adjective, noun, shop, shopkeep, stall, feature, quest, uselessPerson){
     var inn_adjective = getRandom(adjective)
     var inn_noun = getRandom(noun)
     var shop_description = getRandom(shop)
+    var shop_keeper = getRandom(shopkeep)
     var market_stall = getRandom(stall)
     var city_feature = getRandom(feature)
     var city_quest = getRandom(quest)
@@ -10,6 +11,7 @@ function cityExplore(adjective, noun, shop, stall, feature, quest, uselessPerson
     
     var text = "<b>Inn name:</b> The " + inn_adjective + " " + inn_noun
     text += "<br><br><b>Shop name:</b> " + shop_description
+    text += "<br><br><b>Shopkeeper:</b> " + shop_keeper
     text += "<br><br><b>Market Stall:</b> " + market_stall
     text += "<br><br><b>City Feature:</b> " + city_feature
     text += "<br><br><b>City Quest:</b> " + city_quest
@@ -19,7 +21,7 @@ function cityExplore(adjective, noun, shop, stall, feature, quest, uselessPerson
     document.getElementById('output-text').innerHTML = text
 }
 
-function npcGenerate(firstname, lastname, gender, race, height, body, notable, clothing, profession, personality, motive) {
+function npcGenerate(firstname, lastname, gender, race, height, body, notable, clothing, profession, personality, motive, catchPhrase) {
 
     var name_first = getRandom(firstname)
     var name_last = getRandom(lastname)
@@ -32,12 +34,14 @@ function npcGenerate(firstname, lastname, gender, race, height, body, notable, c
     var npc_profession = getRandom(profession)
     var npc_personality = getRandom(personality)
     var npc_motive = getRandom(motive)
+    var npc_catch_phrase = getRandom(catchPhrase)
 
 
 
     var text = "<b>NPC: " + name_first + " " + name_last + "</b>. " + npc_gender + " " + npc_race + ". " 
     text += "<br><br>They are " + npc_height + " and their body is " + npc_body +". This person's most notable feature is " + npc_notable + ". Their clothing is " + npc_clothing + " and they look like they might work as a(an) " + npc_profession + ". "
     text += "They appear " + npc_personality + ". " + npc_motive
+    text += "<br><br>Their catchphrase is \"" + npc_catch_phrase +"\""
 
     document.getElementById('output-text').innerHTML = text
 }
@@ -100,6 +104,56 @@ function dungeonRoom(roomAccentMundane, roomAccentExotic, minorRoomItems, majorR
     document.getElementById('output-text').innerHTML = text
 }
 
+function worldExplore(worldFeature, worldweather, worldclimate){
+    var feature = getRandom(worldFeature)
+    var weather = getRandom(worldweather)
+    var climate = getRandom(worldclimate)
+
+    
+    var text = "<b>World Feature:</b> The " + feature
+    text += "<br><br><b>World Weather:</b> " + weather
+    text += "<br><br><b>World Climate:</b> " + climate
+
+
+    document.getElementById('output-text').innerHTML = text
+}
+
+function randomAdventurer(adventuererList) {
+    var adventurer = getRandom(adventuererList)
+
+    var text = "<b>Adventurer Class:</b> " + adventurer
+
+    document.getElementById('output-text').innerHTML = text
+}
+
+function potionGenerate(potion_container, potion_shape, potion_color, potion_descriptor_variant, potion_closure, potion_decoration, potion_label, potion_texture, potion_smell, potion_effect, potion_temporary_side_effect) {
+   var container = getRandom(potion_container)
+   var shape = getRandom(potion_shape)
+   var color = getRandom(potion_color)
+   var descriptor = getRandom(potion_descriptor_variant)
+   var closure = getRandom(potion_closure)
+   var decoration = getRandom(potion_decoration)
+   var label = getRandom(potion_label)
+   var texture = getRandom(potion_texture)
+   var smell = getRandom(potion_smell)
+   var effect = getRandom(potion_effect)
+   var side_effect = getRandom(potion_temporary_side_effect)
+
+   var text = "<b>Potion container:</b> " + container
+   text += "<br><b>Potion shape:</b> " + shape
+   text += "<br><b>Potion color:</b> " + color
+   text += "<br><b>Potion descriptor:</b> " + descriptor
+   text += "<br><b>Potion closure:</b> " + closure
+   text += "<br><b>Potion decoration:</b> " + decoration
+   text += "<br><b>Potion label:</b> " + label
+   text += "<br><b>Potion texture:</b> " + texture
+   text += "<br><b>Potion smell:</b> " + smell
+   text += "<br><b>Potion effect:</b> " + effect
+   text += "<br><b>Potion side effect:</b> " + side_effect
+
+
+   document.getElementById('output-text').innerHTML = text
+}
 
 function getRandom(inputArray){
     var item = inputArray[Math.floor(Math.random()*inputArray.length)];

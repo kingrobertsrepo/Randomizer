@@ -12,7 +12,11 @@
         <script type="text/javascript" src="scripts\loot_items.js"></script>
         <script type="text/javascript" src="scripts\traps.js"></script>
         <script type="text/javascript" src="scripts\dungeon_accents.js"></script>
+        <script type="text/javascript" src="scripts\world_explore.js"></script>
+        <script type="text/javascript" src="scripts\random_adventurer.js"></script>
 
+
+        
         
         <title>
 
@@ -30,15 +34,21 @@
             <tr style="height: 500px">
                 <td style="padding-top: 10px; padding-bottom: 10px; background: lightblue; width: 15%; ">
                     <center>
-                    <button onclick="cityExplore(inn_adjective, inn_noun, shop_names, market_stalls, city_feature, city_quest, uselessPerson)">City Explore</button>
+                    <button onclick="cityExplore(inn_adjective, inn_noun, shop_names, shopkeepers, market_stalls, city_feature, city_quest, uselessPerson)">City Explore</button>
                     <br><br>
-                    <button onclick="npcGenerate(npc_firstname, npc_lastname, npc_gender, npc_race, npc_height, npc_body, npc_notable, npc_clothing, npc_profession, npc_personality, npc_motive)">Generate NPC</button>
+                    <button onclick="npcGenerate(npc_firstname, npc_lastname, npc_gender, npc_race, npc_height, npc_body, npc_notable, npc_clothing, npc_profession, npc_personality, npc_motive, npc_catchphrase)">Generate NPC</button>
                     <br><br>
-                    <button onclick="itemGenerate(curious_items, treasure_items, mundane_items)">Curious Item</button>
+                    <button onclick="itemGenerate(curious_items, treasure_items, mundane_items)">Loot Item</button>
+                    <br><br>
+                    <button onclick="potionGenerate(potion_container, potion_shape, potion_color, potion_descriptor_variant, potion_closure, potion_decoration, potion_label, potion_texture, potion_smell, potion_effect, potion_temporary_side_effect)">Potion</button>
                     <br><br>
                     <button onclick="trapGenerate(challenges, physical_trigger, physical_reaction, physical_trap, arcane_trigger, arcane_reaction, arcane_trap, trap_reset)">Traps</button>
                     <br><br>
                     <button onclick="dungeonRoom(roomAccentMundane, roomAccentExotic, minorRoomItems, majorRoomItems)">Dungeon Room</button>
+                    <br><br>
+                    <button onclick="worldExplore(worldFeature, worldWeather, worldClimate)">World Explore</button>
+                    <br><br>
+                    <button onclick="randomAdventurer(randomAdventurerClass)">Random Adventurer</button>
                     </center>
                 </td>
 
