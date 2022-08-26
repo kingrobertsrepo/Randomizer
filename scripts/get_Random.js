@@ -1,7 +1,23 @@
 //comment
-function cityExplore(adjective, noun, shop, shopkeep, stall, feature, statue, quest, uselessPerson){
+function innSetting (adjective, noun, inn_encounter, inn_patron){
+
     var inn_adjective = getRandom(adjective)
     var inn_noun = getRandom(noun)
+    var inn_encounter = getRandom(inn_encounter)
+    var inn_patron = getRandom(inn_patron)
+
+
+    var text = "<b>Inn name:</b> The " + inn_adjective + " " + inn_noun
+
+    text += "<br><br><b>Inn encounter:</b> " + inn_encounter
+    text += "<br><br><b>Inn patron:</b> " + inn_patron
+
+    document.getElementById('output-text').innerHTML = text
+
+}
+
+function cityExplore(shop, shopkeep, stall, feature, statue, quest, uselessPerson){
+
     var shop_description = getRandom(shop)
     var shop_keeper = getRandom(shopkeep)
     var market_stall = getRandom(stall)
@@ -11,8 +27,7 @@ function cityExplore(adjective, noun, shop, shopkeep, stall, feature, statue, qu
     var useless_person = getRandom(uselessPerson)
 
     
-    var text = "<b>Inn name:</b> The " + inn_adjective + " " + inn_noun
-    text += "<br><br><b>Shop name:</b> " + shop_description
+    var text = "<b>Shop name:</b> " + shop_description
     text += "<br><br><b>Shopkeeper:</b> " + shop_keeper
     text += "<br><br><b>Market Stall:</b> " + market_stall
     text += "<br><br><b>City Feature:</b> " + city_feature
@@ -49,17 +64,27 @@ function npcGenerate(firstname, lastname, gender, race, height, body, notable, c
     document.getElementById('output-text').innerHTML = text
 }
 
-function itemGenerate(curious_item, treasure_item, mundane_item, rich_pocket_items) {
+function itemGenerate(curious_item, treasure_item, mundane_item, rich_pocket_items, grab_bag_items) {
     var curious = getRandom(curious_item)
     var treasure = getRandom(treasure_item)
     var mundane = getRandom(mundane_item)
     var richPockets = getRandom(rich_pocket_items)
+    var grabBag1 = getRandom(grab_bag_items)
+    var grabBag2 = getRandom(grab_bag_items)
+    var grabBag3 = getRandom(grab_bag_items)
+    var grabBag4 = getRandom(grab_bag_items)
+    var grabBag5 = getRandom(grab_bag_items)
 
 
     var text = "<b>Curious Item:</b> " + curious
     text += "<br><br><b>Treasure Item:</b> " + treasure
     text += "<br><br><b>Mundane Item:</b> " + mundane
     text += "<br><br><b>Rich Pocket Item:</b> " + richPockets
+    text += "<br><br><b>Grab Bag Item:</b> " + grabBag1
+    text += "<br><br><b>Grab Bag Item:</b> " + grabBag2
+    text += "<br><br><b>Grab Bag Item:</b> " + grabBag3
+    text += "<br><br><b>Grab Bag Item:</b> " + grabBag4
+    text += "<br><br><b>Grab Bag Item:</b> " + grabBag5
 
     document.getElementById('output-text').innerHTML = text
 }
@@ -109,15 +134,19 @@ function dungeonRoom(roomAccentMundane, roomAccentExotic, minorRoomItems, majorR
     document.getElementById('output-text').innerHTML = text
 }
 
-function worldExplore(worldFeature, worldweather, worldclimate){
+function worldExplore(worldFeature, worldweather, worldclimate, landscape_feature, world_vignette){
     var feature = getRandom(worldFeature)
     var weather = getRandom(worldweather)
     var climate = getRandom(worldclimate)
+    var landscape = getRandom(landscape_feature)
+    var vignette = getRandom(world_vignette)
 
     
     var text = "<b>World Feature:</b> The " + feature
     text += "<br><br><b>World Weather:</b> " + weather
     text += "<br><br><b>World Climate:</b> " + climate
+    text += "<br><br><b>Landscape Feature:</b> " + landscape
+    text += "<br><br><b>World vignette:</b> " + vignette
 
 
     document.getElementById('output-text').innerHTML = text
@@ -131,7 +160,7 @@ function randomAdventurer(adventuererList) {
     document.getElementById('output-text').innerHTML = text
 }
 
-function potionGenerate(potion_container, potion_shape, potion_color, potion_descriptor_variant, potion_closure, potion_decoration, potion_label, potion_texture, potion_smell, potion_effect, potion_temporary_side_effect) {
+function potionGenerate(potion_container, potion_shape, potion_color, potion_descriptor_variant, potion_closure, potion_decoration, potion_label, potion_texture, potion_smell, potion_effect, potion_temporary_side_effect, potion_effect_secondary) {
    var container = getRandom(potion_container)
    var shape = getRandom(potion_shape)
    var color = getRandom(potion_color)
@@ -143,6 +172,7 @@ function potionGenerate(potion_container, potion_shape, potion_color, potion_des
    var smell = getRandom(potion_smell)
    var effect = getRandom(potion_effect)
    var side_effect = getRandom(potion_temporary_side_effect)
+   var effect2 = getRandom(potion_effect_secondary)
 
    var text = "<b>Potion container:</b> " + container
    text += "<br><b>Potion shape:</b> " + shape
@@ -154,6 +184,7 @@ function potionGenerate(potion_container, potion_shape, potion_color, potion_des
    text += "<br><b>Potion texture:</b> " + texture
    text += "<br><b>Potion smell:</b> " + smell
    text += "<br><b>Potion effect:</b> " + effect
+   text += "<br><b>Potion effect 2:</b> " + effect2
    text += "<br><b>Potion side effect:</b> " + side_effect
 
 
