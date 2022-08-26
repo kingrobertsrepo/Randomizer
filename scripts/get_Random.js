@@ -48,15 +48,17 @@ function npcGenerate(firstname, lastname, gender, race, height, body, notable, c
     document.getElementById('output-text').innerHTML = text
 }
 
-function itemGenerate(curious_item, treasure_item, mundane_item) {
+function itemGenerate(curious_item, treasure_item, mundane_item, rich_pocket_items) {
     var curious = getRandom(curious_item)
     var treasure = getRandom(treasure_item)
     var mundane = getRandom(mundane_item)
+    var richPockets = getRandom(rich_pocket_items)
 
 
     var text = "<b>Curious Item:</b> " + curious
     text += "<br><br><b>Treasure Item:</b> " + treasure
     text += "<br><br><b>Mundane Item:</b> " + mundane
+    text += "<br><br><b>Rich Pocket Item:</b> " + richPockets
 
     document.getElementById('output-text').innerHTML = text
 }
