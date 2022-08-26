@@ -1,10 +1,11 @@
-function cityExplore(adjective, noun, shop, shopkeep, stall, feature, quest, uselessPerson){
+function cityExplore(adjective, noun, shop, shopkeep, stall, feature, statue, quest, uselessPerson){
     var inn_adjective = getRandom(adjective)
     var inn_noun = getRandom(noun)
     var shop_description = getRandom(shop)
     var shop_keeper = getRandom(shopkeep)
     var market_stall = getRandom(stall)
     var city_feature = getRandom(feature)
+    var city_statue = getRandom(statue)
     var city_quest = getRandom(quest)
     var useless_person = getRandom(uselessPerson)
 
@@ -14,6 +15,7 @@ function cityExplore(adjective, noun, shop, shopkeep, stall, feature, quest, use
     text += "<br><br><b>Shopkeeper:</b> " + shop_keeper
     text += "<br><br><b>Market Stall:</b> " + market_stall
     text += "<br><br><b>City Feature:</b> " + city_feature
+    text += "<br><br><b>City Statue:</b> " + city_statue
     text += "<br><br><b>City Quest:</b> " + city_quest
     text += "<br><br><b>Useless Person: (Gather information/Investigation)</b> " + useless_person
 
