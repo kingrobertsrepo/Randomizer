@@ -1,3 +1,4 @@
+//comment
 function cityExplore(adjective, noun, shop, shopkeep, stall, feature, statue, quest, uselessPerson){
     var inn_adjective = getRandom(adjective)
     var inn_noun = getRandom(noun)
