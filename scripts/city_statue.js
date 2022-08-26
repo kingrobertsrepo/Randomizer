@@ -1,4 +1,4 @@
-var inn_noun = [
+var city_statue = [
 "A weather worn, articulated wooden mannequin with three heads (one of them a devil's) and six arms. The arms move, crudely, and hold instruments. The legs are goat hooves. An old, much abbreviated and poorly spelled inscription at the base reads, 'Ruin Ye Goode Faithe'. Perched on the shoulder of the devil is a Blue Jay carrying a twig in its beak.",
 "A goddess or demigoddess holding a torch up high and wrapping her cloak around a trio of young looking slaves with broken chains on thier wrists and ankles.",
 "It is a statue dedicated to a famous saint of a local Lawful Good religion. The statue depicts a man reaching to the sky, towards something.",
